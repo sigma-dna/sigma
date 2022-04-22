@@ -1,6 +1,6 @@
 const sigmaHeader = window.document.querySelector('#sigma-header');
 sigmaHeader.innerHTML = 
-`<a href="/" class="logo"><span class="color-style">Σ</span> sigma</a>
+`<a href="/sigma/" class="logo"><span class="color-style">Σ</span> sigma</a>
 <nav>
     <ul id="header-menu">
         <li><a href="/" class="menu-option">Estatística I</a></li>

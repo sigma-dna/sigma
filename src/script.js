@@ -9,3 +9,31 @@ sigmaHeader.innerHTML =
         <li><a href="/sigma/" class="menu-option">Contato</a></li>
     </ul>
 </nav>`;
+if(!window.document.querySelector('sigma-home')){
+    sigmaHeader.style.setProperty('box-shadow','0px 1px 2px -1px rgba(54,47,35,.4)');
+}
+const titles = window.document.querySelectorAll('.content-article>h2');
+const nav = window.document.querySelector('#aside-nav');
+function createAsideNav(){
+    titles.forEach(title=>{
+        const li = window.document.createElement('li');
+        const a = window.document.createElement('a');
+        a.setAttribute('href',`#${title.id}`);
+        a.classList.add('menu-option', 'aside-option');
+        a.innerText = title.innerText;
+        li.appendChild(a);
+        nav.appendChild(li);
+    })
+    const asideOptions = window.document.querySelectorAll('.aside-option');
+    asideOptions.forEach(asideOption=>{
+        asideOption.addEventListener('click', scroll);
+    })
+    function scroll(e){
+        e.preventDefault();
+        headerHeight = sigmaHeader.getBoundingClientRect().height;
+        const to = window.document.querySelector(this.getAttribute('href')).parentElement;
+        const position = to.getBoundingClientRect().top;
+        window.scrollBy({top: position - headerHeight, behavior: 'smooth'});
+    }
+}
+createAsideNav();

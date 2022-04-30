@@ -9,7 +9,7 @@ sigmaHeader.innerHTML =
         <li><a href="/sigma/" class="menu-option">Contato</a></li>
     </ul>
 </nav>`;
-if(!window.document.querySelector('sigma-home')){
+if(!window.document.querySelector('#sigma-home')){
     sigmaHeader.style.setProperty('box-shadow','0px 1px 2px -1px rgba(54,47,35,.4)');
 }
 const titles = window.document.querySelectorAll('.content-article>h2');

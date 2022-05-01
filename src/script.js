@@ -31,7 +31,7 @@ function createAsideNav(){
     })
     function scroll(e){
         e.preventDefault();
-        headerHeight = sigmaHeader.getBoundingClientRect().height;
+        const headerHeight = sigmaHeader.getBoundingClientRect().height;
         const to = window.document.querySelector(this.getAttribute('href')).parentElement;
         const position = to.getBoundingClientRect().top;
         window.scrollBy({top: position - headerHeight, behavior: 'smooth'});

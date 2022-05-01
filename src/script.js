@@ -15,6 +15,7 @@ if(!window.document.querySelector('#sigma-home')){
 const titles = window.document.querySelectorAll('.content-article>h2');
 const nav = window.document.querySelector('#aside-nav');
 function createAsideNav(){
+    nav.replaceChildren()
     titles.forEach(title=>{
         const li = window.document.createElement('li');
         const a = window.document.createElement('a');

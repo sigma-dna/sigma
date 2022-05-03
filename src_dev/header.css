@@ -1,0 +1,34 @@
+#sigma-header{
+    background-color: inherit;
+    position: sticky;
+    top: 0;
+    min-height: 3.75rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem var(--page-padding);
+    z-index: 3;
+}
+.logo{
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-family: 'Comfortaa';
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+}
+#header-menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width: 587px) {
+    #sigma-header{
+        justify-content: center;
+        gap: .75rem;
+    }
+}

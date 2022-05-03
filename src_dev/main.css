@@ -1,0 +1,39 @@
+#sigma-home{
+    min-height: calc(100vh - 60px);
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    margin: 0 auto;
+    text-align: center;
+}
+#home-title{
+    font-family: 'Poppins';
+    font-size: 3.5rem;
+    line-height: 1.2;
+    max-width: 13ch;
+}
+#home-resume{
+    font-family: 'Work Sans';
+    font-size: 1.25rem;
+    line-height: 1.4;
+    max-width: 49ch;
+}
+@media (max-width: 587px) {
+    #sigma-home{
+        min-height: calc(100vh - 104px);
+    }
+}
+@media (max-width: 471px) {
+    #sigma-home{
+        min-height: calc(100vh - 136px);
+    }
+    #home-title{
+        font-size: 2.5rem;
+    }
+    #home-resume {
+        font-size: 1rem;
+    }
+}

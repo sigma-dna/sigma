@@ -2,7 +2,10 @@
     background-color: inherit;
     position: sticky;
     top: 0;
-    min-height: 3.75rem;
+    min-height: 5.25rem;
+    padding: .75rem;
+}
+header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -10,6 +13,8 @@
     align-items: center;
     padding: .75rem var(--page-padding);
     z-index: 3;
+    max-width: 1240px;
+    margin: 0 auto;
 }
 .logo{
     display: block;
@@ -28,6 +33,9 @@
 }
 @media (max-width: 587px) {
     #sigma-header{
+        padding: 0;
+    }
+    header{
         justify-content: center;
         gap: .75rem;
     }

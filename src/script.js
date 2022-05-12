@@ -1,14 +1,16 @@
 const sigmaHeader = window.document.querySelector('#sigma-header');
 sigmaHeader.innerHTML = 
-`<a href="/sigma/" class="logo"><span class="color-style">Σ</span> sigma</a>
-<nav>
-    <ul id="header-menu">
-        <li><a href="/sigma/" class="menu-option">Estatística I</a></li>
-        <li><a href="/sigma/gacvi/" class="menu-option">GACV I</a></li>
-        <li><a href="/sigma/" class="menu-option">Pré-Cálculo</a></li>
-        <li><a href="/sigma/" class="menu-option">Contato</a></li>
-    </ul>
-</nav>`;
+`<header>
+    <a href="/sigma/" class="logo"><span class="color-style">Σ</span> sigma</a>
+    <nav>
+        <ul id="header-menu">
+            <li><a href="/sigma/" class="menu-option">Estatística I</a></li>
+            <li><a href="/sigma/gacvi/" class="menu-option">GACV I</a></li>
+            <li><a href="/sigma/" class="menu-option">Pré-Cálculo</a></li>
+            <li><a href="/sigma/" class="menu-option">Contato</a></li>
+        </ul>
+    </nav>
+</header>`;
 if(!window.document.querySelector('#sigma-home')){
     sigmaHeader.style.setProperty('box-shadow','0px 1px 2px -1px rgba(54,47,35,.4)');
 }

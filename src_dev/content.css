@@ -1,18 +1,21 @@
 #sigma-grid{
     display: grid;
-    grid-template: 'main aside' / minmax(0, 3fr) minmax(36ch, 1fr);
-    padding-right: var(--page-padding);
+    grid-template: 'main aside' / minmax(0, 800px) minmax(36ch, 400px);
+    justify-content: center;
+    gap: 40px;
+    padding: 0 .75rem;
 }
 #sigma-aside{
     /* background-color: #f9f7f4; */
     grid-area: aside;
-    padding: .75rem 1.5rem;
+    padding: .75rem var(--page-padding);
     position: sticky;
-    top: 3.75rem;
-    height: calc(100vh - 3.75rem);
+    top: 5.25rem;
+    height: calc(100vh - 5.25rem);
     align-self: start;
     border-left: 1px solid #dfdcd9;
     border-right: 1px solid #dfdcd9;
+    margin-right: var(--page-padding);
 }
 .aside-option{
     padding: 1rem;
@@ -21,7 +24,6 @@
 }
 #sigma-content{
     color: #575655;
-    max-width: 800px;
     padding: 1.25rem var(--page-padding);
     font-family: 'Work Sans';
     font-size: 1.125rem;
@@ -67,15 +69,11 @@
     color: #996600;
     margin: 0 .3125rem 0 .9375rem;
 }
-@media (max-width: 1023px) {
-    #sigma-grid{
-        padding-right: 0;
-    }
-}
 @media (max-width:768px) {
     #sigma-grid{
         grid-template: 'main' / 1fr;
         justify-content: center;
+        padding: 0;
     }
     #sigma-aside{
         display: none;

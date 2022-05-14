@@ -1,6 +1,6 @@
 #sigma-home{
-    min-height: calc(100vh - 60px);
-    max-width: 1200px;
+    min-height: calc(100vh - 5.25rem);
+    max-width: 1240px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,6 +8,20 @@
     gap: .75rem;
     margin: 0 auto;
     text-align: center;
+    overflow: hidden;
+}
+#sigma-home *{
+    animation: surge 3s forwards;
+}
+@keyframes surge {
+    from {
+        opacity: .5;
+        transform: scale(0) translateY(50vh);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 #home-title{
     font-family: 'Poppins';

@@ -13,7 +13,7 @@ sigmaHeader.innerHTML =
 </header>`;
 if(!window.document.querySelector('#sigma-home')){
     sigmaHeader.style.setProperty('border-bottom','.0625rem solid rgba(31, 27, 22, 0.08)');
-    sigmaHeader.querySelector('header').style.setProperty('padding','.59375rem 0');
+    sigmaHeader.querySelector('header').style.setProperty('padding','.59375rem .625rem');
 }
 const titles = window.document.querySelectorAll('.content-article>h2');
 const nav = window.document.querySelector('#aside-nav');

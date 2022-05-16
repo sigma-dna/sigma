@@ -1,11 +1,11 @@
 #sigma-grid{
     display: grid;
     grid-template: 'main aside' / 2fr 1fr;
-    max-width: 70.5rem;
+    max-width: 71.75rem;
     justify-content: center;
     gap: 1.5rem;
     margin: 0 auto;
-    padding: 1.25rem 0;
+    padding: 1.25rem .625rem;
 }
 #sigma-aside{
     background: linear-gradient(0deg, rgba(130, 85, 0, 0.05), rgba(130, 85, 0, 0.05)), #FCFCFC;
@@ -77,6 +77,9 @@
         grid-template: 'main' / 1fr;
         justify-content: center;
         padding: 0;
+    }
+    #sigma-content{
+        border: none;
     }
     #sigma-aside{
         display: none;

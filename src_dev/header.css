@@ -1,9 +1,8 @@
 #sigma-header{
-    background-color: inherit;
+    background-color: #fcfcfc;
     position: sticky;
     top: 0;
-    min-height: 5.25rem;
-    padding: .75rem;
+    min-height: 3.5rem;
 }
 header{
     display: flex;
@@ -11,9 +10,9 @@ header{
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: .75rem var(--page-padding);
+    padding: .625rem 0;
     z-index: 3;
-    max-width: 1240px;
+    max-width: 1128px;
     margin: 0 auto;
 }
 .logo{
@@ -32,9 +31,6 @@ header{
     justify-content: center;
 }
 @media (max-width: 587px) {
-    #sigma-header{
-        padding: 0;
-    }
     header{
         justify-content: center;
         gap: .75rem;

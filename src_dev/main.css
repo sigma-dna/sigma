@@ -1,5 +1,5 @@
 #sigma-home{
-    min-height: calc(100vh - 5.25rem);
+    min-height: calc(100vh - 3.5rem);
     max-width: 1240px;
     display: flex;
     flex-direction: column;

@@ -41,7 +41,14 @@
                 <div class="img-container"><img src="coordenadas_cartesianas.svg" alt=""></div>
             </article>
         </main>
-        <script src="/sigma/src/script.js"></script>
+        <div class="modal-container">
+            <div class="modal">
+                <strong>Atenção!</strong>
+                <p>Página ainda em desenvolvimento, o conteúdo pode estar impreciso ou incorreto.</p>
+                <button class="close-advice">X</button>
+            </div>
+        </div>
+        <script src="/sigma/src/script.js" onload="document.querySelector('.modal-container').classList.add('active')"></script>
 </body>
 
 </html>

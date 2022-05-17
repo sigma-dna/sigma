@@ -1,4 +1,5 @@
 const sigmaHeader = window.document.querySelector('#sigma-header');
+const closeButton = window.document.querySelector('.close-advice')
 sigmaHeader.innerHTML = 
 `<header>
     <a href="/sigma/" class="logo"><span class="color-style">Σ</span> sigma</a>
@@ -40,4 +41,8 @@ if(!window.document.querySelector('#sigma-home')){
         }
     }
     createAsideNav();
+    closeButton.addEventListener('click', closeAdvice)
+    function closeAdvice() {
+        closeButton.parentElement.parentElement.remove()
+    }
 }

@@ -14,30 +14,30 @@ sigmaHeader.innerHTML =
 if(!window.document.querySelector('#sigma-home')){
     sigmaHeader.style.setProperty('border-bottom','.0625rem solid rgba(31, 27, 22, 0.08)');
     sigmaHeader.querySelector('header').style.setProperty('padding','.59375rem .625rem');
-}
-const titles = window.document.querySelectorAll('.content-article>h2');
-const nav = window.document.querySelector('#aside-nav');
-function createAsideNav(){
-    nav.replaceChildren()
-    titles.forEach(title=>{
-        const li = window.document.createElement('li');
-        const a = window.document.createElement('a');
-        a.setAttribute('href',`#${title.id}`);
-        a.classList.add('menu-option', 'aside-option');
-        a.innerText = title.innerText;
-        li.appendChild(a);
-        nav.appendChild(li);
-    })
-    const asideOptions = window.document.querySelectorAll('.aside-option');
-    asideOptions.forEach(asideOption=>{
-        asideOption.addEventListener('click', scroll);
-    })
-    function scroll(e){
-        e.preventDefault();
-        const headerHeight = sigmaHeader.getBoundingClientRect().height;
-        const to = window.document.querySelector(this.getAttribute('href')).parentElement;
-        const position = to.getBoundingClientRect().top;
-        window.scrollBy({top: position - headerHeight, behavior: 'smooth'});
+    const titles = window.document.querySelectorAll('.content-article>h2');
+    const nav = window.document.querySelector('#aside-nav');
+    function createAsideNav(){
+        nav.replaceChildren()
+        titles.forEach(title=>{
+            const li = window.document.createElement('li');
+            const a = window.document.createElement('a');
+            a.setAttribute('href',`#${title.id}`);
+            a.classList.add('menu-option', 'aside-option');
+            a.innerText = title.innerText;
+            li.appendChild(a);
+            nav.appendChild(li);
+        })
+        const asideOptions = window.document.querySelectorAll('.aside-option');
+        asideOptions.forEach(asideOption=>{
+            asideOption.addEventListener('click', scroll);
+        })
+        function scroll(e){
+            e.preventDefault();
+            const headerHeight = sigmaHeader.getBoundingClientRect().height;
+            const to = window.document.querySelector(this.getAttribute('href')).parentElement;
+            const position = to.getBoundingClientRect().top;
+            window.scrollBy({top: position - headerHeight, behavior: 'smooth'});
+        }
     }
+    createAsideNav();
 }
-createAsideNav();

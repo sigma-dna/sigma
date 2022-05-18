@@ -16,7 +16,7 @@ img{
 .color-style{
     color: #825500;
 }
-.menu-option{
+.menu-option>a, .menu-option>h2{
     display: block;
     padding: .4375rem .9375rem;
     color: black;
@@ -24,12 +24,13 @@ img{
     font-family: 'Work Sans';
     font-size: 0.875rem;
     line-height: 1.25rem;
+    font-weight: 400;
     border: 0.0625rem solid transparent;
     border-radius: .5rem;
     letter-spacing: 0.015625rem;
     transition: 0.25s ease-in-out;
 }
-.menu-option:hover{
+.menu-option:hover>a, .menu-option:hover>h2{
     color: #825500;
     background: linear-gradient(0deg, rgba(130, 85, 0, 0.05), rgba(130, 85, 0, 0.05)), #FCFCFC;
     border: 1px solid rgba(31, 27, 22, 0.04);

@@ -17,11 +17,11 @@
     border: 1px solid rgba(31, 27, 22, 0.04);
     border-radius: 1.125rem;
 }
-.aside-option{
+.aside-option>a{
     padding: .5rem 1rem;
     min-width: 23ch;
 }
-.aside-option:hover{
+.aside-option:hover>a{
     color: #4f4539;
     background-color: #f0e0cf;
 }

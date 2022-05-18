@@ -3,6 +3,7 @@
     position: sticky;
     top: 0;
     min-height: 3.5rem;
+    z-index: 2;
 }
 header{
     display: flex;
@@ -29,6 +30,31 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+.dropdown{
+    position: relative;
+    cursor: pointer;
+}
+.dropdown>h2{
+    border-bottom: none !important;
+    border-radius: .5rem .5rem 0 0;
+}
+.dropdown-menu{
+    width: 100%;
+    padding: .25rem;
+    position: absolute;
+    background-color: #fcfcfc;
+    display: none;
+    border: 1px solid rgba(31, 27, 22, 0.04);
+    border-top: none;
+    border-radius: 0 0 .5rem .5rem;
+}
+.dropdown-menu>li>a{
+    padding: .25rem;
+    font-size: .75rem;
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
 }
 @media (max-width: 587px) {
     header{

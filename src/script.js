@@ -5,10 +5,17 @@ sigmaHeader.innerHTML =
     <a href="/sigma/" class="logo"><span class="color-style">Σ</span> sigma</a>
     <nav>
         <ul id="header-menu">
-            <li><a href="/sigma/" class="menu-option">Estatística I</a></li>
-            <li><a href="/sigma/gacvi/" class="menu-option">GACV I</a></li>
-            <li><a href="/sigma/" class="menu-option">Pré-Cálculo</a></li>
-            <li><a href="/sigma/" class="menu-option">Contato</a></li>
+            <li class="menu-option dropdown">
+                <h2>1° Período</h2>
+                <ul class="dropdown-menu">
+                    <li class="menu-option"><a href="/sigma/">Estatística I</a></li>
+                    <li class="menu-option dropdown-option"><a href="/sigma/gacvi/">GACV I</a></li>
+                    <li class="menu-option"><a href="/sigma/">Pré-Cálculo</a></li>
+                </ul>
+            </li>
+            <li class="menu-option"><a href="/sigma/gacvi/">Outros Períodos</a></li>
+            <li class="menu-option"><a href="/sigma/">Optativas</a></li>
+            <li class="menu-option"><a href="/sigma/">Contato</a></li>
         </ul>
     </nav>
 </header>`;
@@ -21,9 +28,9 @@ if(!window.document.querySelector('#sigma-home')){
         nav.replaceChildren()
         titles.forEach(title=>{
             const li = window.document.createElement('li');
+            li.classList.add('menu-option', 'aside-option');
             const a = window.document.createElement('a');
             a.setAttribute('href',`#${title.id}`);
-            a.classList.add('menu-option', 'aside-option');
             a.innerText = title.innerText;
             li.appendChild(a);
             nav.appendChild(li);

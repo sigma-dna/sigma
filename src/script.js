@@ -35,16 +35,16 @@ if(!window.document.querySelector('#sigma-home')){
             li.appendChild(a);
             nav.appendChild(li);
         })
-        const asideOptions = window.document.querySelectorAll('.aside-option');
+        const asideOptions = window.document.querySelectorAll('.aside-option>a');
         asideOptions.forEach(asideOption=>{
             asideOption.addEventListener('click', scroll);
         })
         function scroll(e){
             e.preventDefault();
             const headerHeight = sigmaHeader.getBoundingClientRect().height;
-            const to = window.document.querySelector(this.getAttribute('href')).parentElement;
+            const to = window.document.querySelector(this.getAttribute('href'));
             const position = to.getBoundingClientRect().top;
-            window.scrollBy({top: position - headerHeight, behavior: 'smooth'});
+            window.scrollBy({top: position - headerHeight - 20, behavior: 'smooth'});
         }
     }
     createAsideNav();

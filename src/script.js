@@ -13,7 +13,7 @@ sigmaHeader.innerHTML =
                     <li class="menu-option"><a href="/sigma/">Pré-Cálculo</a></li>
                 </ul>
             </li>
-            <li class="menu-option"><a href="/sigma/gacvi/">Outros Períodos</a></li>
+            <li class="menu-option"><a href="/sigma/">Outros Períodos</a></li>
             <li class="menu-option"><a href="/sigma/">Optativas</a></li>
             <li class="menu-option"><a href="/sigma/">Contato</a></li>
         </ul>
@@ -52,4 +52,6 @@ if(!window.document.querySelector('#sigma-home')){
     function closeAdvice() {
         closeButton.parentElement.parentElement.remove()
     }
+    const modalContainer = document.querySelector('.modal-container');
+    modalContainer.addEventListener('click', (e)=>{if(!closeButton.parentElement.contains(e.target)){closeAdvice()}});
 }
